@@ -2,6 +2,17 @@ import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 function Navbare() {
+    const [login, setLogin] = React.useState()
+    React.useEffect(() => {
+        let val = localStorage.getItem("login")
+        const role = localStorage.getItem("role")
+        console.log(role)
+        setLogin(val)
+        return () => {
+            setLogin();
+        };
+
+    }, []);
     return (
         <div>
 
@@ -24,27 +35,32 @@ function Navbare() {
 
 
                         <Nav className="me-auto">
-                            <Nav.Link as={Link} to="/">
+                            <Nav.Link style={{ color: "#fff" }} as={Link} to="/">
                                 Home
                             </Nav.Link>
-                            <Nav.Link as={Link} to="/movies">
+                            <Nav.Link style={{ color: "#fff" }} as={Link} to="/movies">
                                 Movies
                             </Nav.Link>
-                            <Nav.Link as={Link} to="/add">
+                            <Nav.Link style={{ color: "#fff" }} as={Link} to="/add">
                                 Add Movie
                             </Nav.Link>
-                            <Nav.Link as={Link} to="/watched">
+                            <Nav.Link style={{ color: "#fff" }} as={Link} to="/watched">
                                 Watched Movies
                             </Nav.Link>
-                            <Nav.Link as={Link} to="/unwatched">
+                            <Nav.Link style={{ color: "#fff" }} as={Link} to="/unwatched">
                                 Unwatched Movies
                             </Nav.Link>
-                            <Nav.Link as={Link} to="/login">
-                                Sign In
-                            </Nav.Link>
-                            <Nav.Link as={Link} to="/Register">
-                                Sign Up
-                            </Nav.Link>
+                            {login === "non" ? <>
+                                <Nav.Link style={{ color: "#fff" }} as={Link} to="/login">
+                                    Sign In
+                                </Nav.Link>
+                                <Nav.Link style={{ color: "#fff" }} as={Link} to="/Register">
+                                    Sign Up
+                                </Nav.Link></> :
+                                <><Nav.Link style={{ color: "#fff" }} as={Link} to="/login">
+                                    Log out
+                                </Nav.Link> </>}
+
 
                         </Nav>
                     </Navbar.Collapse>

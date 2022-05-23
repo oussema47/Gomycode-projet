@@ -13,7 +13,7 @@ import Register from "./Components/Register";
 
 function App() {
   return (
-    <div className="App">
+    <>    <div className="App">
       <Navbare></Navbare>
 
       <Routes>
@@ -28,6 +28,8 @@ function App() {
         <Route path="/Register" element={<Register></Register>}></Route>
       </Routes>
     </div>
+    </>
+
   );
 }
 

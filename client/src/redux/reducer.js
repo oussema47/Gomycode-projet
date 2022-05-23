@@ -1,11 +1,10 @@
 import { ADDMOVIE, EDITMOVIE, WATCHED, } from "./types";
-
 const initalState = {
     movies: [
         {
             id: 0,
             title: "Lucifer",
-            posterUrl: "https://fr.web.img6.acsta.net/pictures/21/05/03/14/41/4314737.jpg",
+            images: "https://fr.web.img6.acsta.net/pictures/21/05/03/14/41/4314737.jpg",
             rate: 6,
             description:
                 "Lassé et mécontent de sa position de Seigneur des Enfers, Lucifer Morningstar démissionne et abandonne son royaume pour la bouillonnante Los Angeles. Dans la Cité des Anges, l'ex maître diabolique est le patron d'un nightclub baptisé Lux.",
@@ -15,7 +14,7 @@ const initalState = {
         {
             id: 1,
             title: "Good Girls",
-            posterUrl:
+            images:
                 "https://m.media-amazon.com/images/M/MV5BYmFmNTVjM2ItNDNmNC00NTU3LWIwNDQtNDhlNThhNjE1MDBjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
             rate: 4.7,
             description:
@@ -26,7 +25,7 @@ const initalState = {
         {
             id: 2,
             title: "La Casa De Papel",
-            posterUrl: "https://fr.web.img6.acsta.net/pictures/21/08/02/16/08/1706767.jpg",
+            images: "https://fr.web.img6.acsta.net/pictures/21/08/02/16/08/1706767.jpg",
             rate: 4.2,
             description:
                 "Huit voleurs font une prise d'otages dans la Maison royale de la Monnaie d'Espagne, tandis qu'un génie du crime manipule la police pour mettre son plan à exécution.",
@@ -36,7 +35,7 @@ const initalState = {
         {
             id: 3,
             title: "Breaking bad",
-            posterUrl:
+            images:
                 "https://cineuropa.org/Galleries/406/435/poster_big.jpg?1636638869137",
             rate: 4.5,
             description:
@@ -47,7 +46,7 @@ const initalState = {
         {
             id: 4,
             title: "Scooby!",
-            posterUrl:
+            images:
                 "https://cinedweller.com/wp-content/uploads/2020/08/scooby-affiche.jpg",
             rate: 4.2,
             description:
@@ -58,7 +57,7 @@ const initalState = {
         {
             id: 5,
             title: "Un fils du Sud",
-            posterUrl:
+            images:
                 "https://afriquefilms.com/images/cache/resize-750x1000/films/fils-sud/affiche.jpg",
             rate: 4.1,
             description:
@@ -69,7 +68,7 @@ const initalState = {
         {
             id: 6,
             title: "Tropic of Violence",
-            posterUrl:
+            images:
                 "https://cineuropa.org/Galleries/421/272/poster_big.jpg?1644229198608",
             rate: 4.1,
             description:
@@ -80,7 +79,7 @@ const initalState = {
         {
             id: 7,
             title: "Saint Laurent",
-            posterUrl:
+            images:
                 "https://toutelaculture.com/wp-content/uploads/2022/01/ulliel-750x1000.jpg",
             rate: 4.1,
             description:
@@ -90,7 +89,7 @@ const initalState = {
         {
             id: 8,
             title: "Ambulance",
-            posterUrl:
+            images:
                 "https://storage.gra.cloud.ovh.net/v1/AUTH_a9d76494089446b789523aa8bdb286f4/wikercdn/img/evenement/2rxoejn55lvjv0wp/medium_0222383.jpg",
             rate: 4.1,
             description:
@@ -100,7 +99,7 @@ const initalState = {
         {
             id: 9,
             title: "Le Lorax",
-            posterUrl:
+            images:
                 "https://www.cinecreatis.net/wp-content/uploads/2018/09/5492ea2f3489a-750x1000.jpg",
             rate: 4.1,
             description:
@@ -133,7 +132,7 @@ const Reducer = (state = initalState, action) => {
         default:
             return state;
     }
-    
+
 };
 
 
